@@ -1,101 +1,80 @@
+import React from "react";
 import Image from "next/image";
-
-export default function Home() {
+import logo from "../app/public/logo.png";
+import urity from "../app/public/urity.png";
+import Frame from "../app/public/Frame.png";
+import pic from "../app/public/pic.png";
+import searchbar from "../app/public/searchbar.png";
+const page = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div>
+      {/*outer container*/}
+      <div className=" w-[1600px] h-[1200px] top-[-4125px] left-[-776px] p-[120px_57px_119.43px_57px] bg-[#FFF8F8]">
+        {/*header div*/}
+        <div className="w-[1486px] h-[135.01px] left-[-127.27px] bg-[#A29875] flex items-center pl-[56.76px] ">
+          <div
+            className="ml-[400px]
+             w-[769.89px] h-[56.24px] top-[39.56px] left-[431.7px] rounded-[13.83px] bg-white flex items-center justify-center"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <p className="text-slate-600 absolute left-[540px]">
+              Search for Gold Jewellery,Diamond Jewellery and More ...
+            </p>
+            {/* Search bar logo  */}
+            <div className=" absolute left-[1245px] ">
+              <Image src={searchbar} alt="" height={21.5} width={21.5} />
+            </div>
+            {/* corner mai heart shopping card k logo ha  */}
+            <div className=" absolute left-[1330.81px] w-[177.8px] h-[30.08px] top-[175px] gap-[38.7px]">
+              <Image src={Frame} alt="logo" width={177.8} height={30.08} />
+            </div>
+          </div>
+          {/*LOGO lagaya ha */}
+          <div className="absolute left-[140px] top-[140px]">
+            <Image src={logo} alt="font" width={63.52} height={90.66} />
+          </div>
+          <div className="absolute left-[210px] ">
+            <Image src={urity} alt="font" width={174} height={83} />
+            {/*Logo yaha tk ha */}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+
+        {/*innner div*/}
+        <div
+          className="absolute w-[1486px] h-[960.57px] top-[120px] left-[57px]  shadow-[0_15px_30px_rgba(0,0,0,0.6)]
+        "
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          {/*ya font or pic k liy div ha  */}
+          <span className="absolute w-[1271.01px] h-[590.59px] top-[300.98px] left-[107.49px]  opacity-100">
+            <h1 className="font-bold text-[37.84px] leading-[62.24px] tracking-[0.025em] text-left">
+              IMPECCABLE <br />
+              CRAFTSMANSHIP AND <br />
+              FINESSE
+            </h1>
+          </span>
+          <div className=" absolute w-[798.9px] h-[144px] top-[523.71px] left-[107.49px] gap-0 opacity-100 ">
+            <p className="font-medium text-[29.24px] leading-[48.1px] tracking-[0.025rem] text-left text-[#787054]">
+              An example of intricate workmanship and detail, elegant necklaces
+              and long and short chains form a part of our desirable collection.
+            </p>
+          </div>
+        </div>
+        {/*ya picture k liy ha  */}
+        <div className="absolute w-[380.1px] h-[525.43px] top-[350px] left-[1090.77px] gap-0 rounded-[128.99px_0_128.99px_0] border-[0.86px_0_0_0] opacity-100">
+          <Image src={pic} alt="pic" width={421.38} height={573.59} />
+        </div>
+        {/*frame k liy ha  */}
+        <div className="absolute w-[330px] h-[470px] top-[370px] left-[1110px] gap-0 rounded-[128.99px_0_128.99px_0] border-[0.86px] border-solid border-white  "></div>
+
+        {/*ya button l liy ha  */}
+        <div className="absolute w-[228.67px] h-[49.2px] top-[820.32px] left-[165.49px] pt-[8.6px] pt-[8.6px] rounded-[13.83px] opacity-100 bg-[#A29875]">
+          <h1 className=" text-[25.8px] leading-[25.1px] tracking-[0.050rem] text-center text-white">
+            {" "}
+            Explore More{" "}
+          </h1>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default page;
